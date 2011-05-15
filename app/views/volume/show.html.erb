@@ -1,5 +1,4 @@
-<h1><%= @volume.name %></h1>
-<h3><%= @volume.start_year %></h3>
+<h2><%= @volume.name %> &mdash; <%= @volume.start_year %></h2>
 <ul>
 	<% @volume.issues.each do |issue| %>
 		<li><a href="<%= "/volumes/#{@volume.id}/#{issue.issue_number.to_i}" %>"><%= "##{issue.issue_number.to_i} - #{issue.name}" %></a></li>

@@ -1,0 +1,51 @@
+body{
+	margin:0;
+	font-family:'Myriad Pro', 'Droid Sans';
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+#header{
+	font-size:1.8em;
+	padding:10px;
+	background:black;
+}
+#header li{
+	display:inline-block;
+}
+#header li#search_item{
+	float:right;
+}
+#header li a{
+	display:block;
+	width:48px;
+	height:48px;
+}
+#header li#home_item a{
+	text-indent:-999em;
+	background:url('/images/home.png') no-repeat center center;
+}
+#header li#search_item a{
+	text-indent:-999em;
+	background:url('/images/search.png') no-repeat center center;
+}
+#body h2{
+	background:#333333;
+	color:white;
+	padding:0.25em 0.5em;
+	margin:0;
+	font-weight:normal;
+}
+#body ul{
+	font-size:1.2em;
+}
+#body ul li{
+	padding:0.5em;
+	border-bottom:solid 1px #666666;
+}
