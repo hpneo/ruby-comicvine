@@ -10,4 +10,13 @@ class ComicVineVolume < OpenStruct
 		object
 	end
 	
+	def self.search(name)
+		response = ComicVine.search(['volume'], name)
+		collection = []
+		response.each do |object|
+			collection << self.new(object)
+		end
+		collection
+	end
+	
 end

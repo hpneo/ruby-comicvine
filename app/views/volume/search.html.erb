@@ -1,0 +1,4 @@
+<% @volumes.each do |volume| %>
+	<h3><%= volume.name %></h3>
+	<img src="<%= volume.image['super_url'] %>" />
+<% end %>
