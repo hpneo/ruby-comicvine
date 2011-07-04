@@ -7,4 +7,6 @@ javascripts:
     - public/javascripts/backbone.js
     - public/javascripts/controllers/*.js
     - app/views/volume/issue.jst
+    - app/views/volume/issue_item.jst
+    - app/views/volume/show.jst
     - public/javascripts/application.js

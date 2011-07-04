@@ -8,7 +8,21 @@ var AppController = Backbone.Controller.extend({
 	root: function(){
 		
 	},
-	volume: function(id){},
+	volume: function(id){
+		$.getJSON('/volumes/'+id, function(data){
+			var data = data.table;
+			var template = JST['show']({ volume : data });
+			$('#body').html(template);
+			$(data.issues).each(function(index, item){
+				$.getJSON('/volumes/'+id+'/'+item.table.issue_number, function(issue_data){
+					issue_template = $(JST['issue_item']({ issue : issue_data.table }));
+					issue_template.hide();
+					$('#issue_collection').append(issue_template);
+					issue_template.fadeIn('fast');
+				});
+			});
+		});
+	},
 	issue: function(id, issue){
 		$.getJSON('/volumes/'+id+'/'+issue, function(data){
 			var data = data.table;

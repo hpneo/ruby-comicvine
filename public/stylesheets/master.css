@@ -1,8 +1,11 @@
 body{
 	font-family:'Segoe UI', 'Myriad Pro';
 }
-#issue_info{
-	width:600px;
+a{
+	text-decoration:none;
+	color:inherit;
+}
+#issue_info, #volume_issues{
 	background:#eeeeee;
 	margin:0 auto;
 	padding:20px;
@@ -10,6 +13,16 @@ body{
 	overflow:hidden;
 	border-radius:5px;
 	-webkit-box-shadow: 1px 1px 10px #000000;
+}
+#issue_info{
+	width:600px;
+}
+#volume_issues{
+	width:94%;
+}
+#volume_issues li{
+	margin:5px;
+	-webkit-box-shadow: 1px 1px 10px #aaa;
 }
 ul{
 	list-style:none;
@@ -32,6 +45,9 @@ ul.lineal#volume_info{
 }
 ul.lineal#volume_info li#volume_name{
 	font-weight:bold;
+}
+ul.lineal#volume_info li#issue_number{
+	float:right;
 }
 h1#issue_name{
 	font-family:'Droid Serif', 'Cambria';

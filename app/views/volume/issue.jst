@@ -1,6 +1,6 @@
 <div id="issue_info">
 	<ul class="lineal" id="volume_info">
-		<li id="volume_name"><%= issue.volume.name %></li>
+		<li id="volume_name"><a href="/#!/volumes/<%= issue.volume.id %>"><%= issue.volume.name %></a></li>
 		<li id="issue_number"><%= issue.issue_number %></li>
 	</ul>
 	<h1 id="issue_name"><%= issue.name %></h1>
