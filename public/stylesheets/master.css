@@ -1,13 +1,15 @@
 body{
-	font-family:'Segoe UI';
-	max-width:600px;
+	font-family:'Segoe UI', 'Myriad Pro';
 }
-.transition {
-	-moz-transition: all 1s cubic-bezier(0.59, 0, 0, 1);
-	-webkit-transition: all 1s cubic-bezier(0.59, 0, 0, 1);
-	-o-transition: all 1s cubic-bezier(0.59, 0, 0, 1);
-	transition: all 1s cubic-bezier(0.59, 0, 0, 1);
-	-webkit-backface-visibility: hidden;
+#issue_info{
+	width:600px;
+	background:#eeeeee;
+	margin:0 auto;
+	padding:20px;
+	background:white;
+	overflow:hidden;
+	border-radius:5px;
+	-webkit-box-shadow: 1px 1px 10px #000000;
 }
 ul{
 	list-style:none;
@@ -32,7 +34,13 @@ ul.lineal#volume_info li#volume_name{
 	font-weight:bold;
 }
 h1#issue_name{
-	font-family:'Cambria';
+	font-family:'Droid Serif', 'Cambria';
+	margin:0;
+}
+#issue_description{
+	font-family: 'Indie Flower';
+	font-size:1.3em;
+	line-height:1.4em;
 }
 img#issue_cover{
 	float:right;

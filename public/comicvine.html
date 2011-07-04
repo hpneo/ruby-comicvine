@@ -3,19 +3,24 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>comicvine</title>
-		<link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="/stylesheets/master.css" type="text/css" media="screen" title="no title" charset="utf-8" />
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif&amp;v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Indie+Flower&v1' rel='stylesheet' type='text/css' />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function(){
-				$('body').children().hide();
-				$.getJSON('http://hpneo-comicvine.com/volumes/2128/1.00?output=json', function(data){
+				$('#issue_info').hide();
+				$('#issue_info').children().hide();
+				$.getJSON('http://hpneo-comicvine.heroku.com/volumes/2128/1.00?output=json', function(data){
 					var data = data.table;
 					$('#volume_name').html(data.volume.name);
 					$('#issue_number').html(data.issue_number);
 					$('#issue_name').html(data.name);
+					$('body').css('background', "url('"+data.image.super_url+"')");
 					$('#issue_cover').attr('src', data.image.super_url);
 					$('#issue_description').html(data.description);
-					$('body').children().each(function(index, item){
+					$('#issue_info').fadeIn('slow');
+					$('#issue_info').children().each(function(index, item){
 						$(item).delay(1000*(index+1)).fadeIn('slow');
 					});
 					$('#issue_description a').each(function(index, item){
@@ -27,12 +32,14 @@
 		</script>
 	</head>
 	<body>
-		<ul class="lineal" id="volume_info">
-			<li id="volume_name"></li>
-			<li id="issue_number"></li>
-		</ul>
-		<h1 id="issue_name"></h1>
-		<img src="" id="issue_cover" />
-		<div id="issue_description"></div>
+		<div id="issue_info">
+			<ul class="lineal" id="volume_info">
+				<li id="volume_name"></li>
+				<li id="issue_number"></li>
+			</ul>
+			<h1 id="issue_name"></h1>
+			<img src="" id="issue_cover" />
+			<div id="issue_description"></div>
+		</div>
 	</body>
 </html>
