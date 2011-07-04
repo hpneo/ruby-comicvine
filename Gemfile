@@ -6,7 +6,7 @@ gem 'rails', '3.0.4'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'win32-open3'
+gem 'win32-open3', :group => :development
 gem 'jammit'
 
 # Use unicorn as the web server
