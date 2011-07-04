@@ -1,0 +1,10 @@
+embed_assets: on
+
+javascripts:
+  app:
+    - public/javascripts/json2.js
+    - public/javascripts/underscore.js
+    - public/javascripts/backbone.js
+    - public/javascripts/controllers/*.js
+    - app/views/volume/issue.jst
+    - public/javascripts/application.js
