@@ -1,7 +1,7 @@
 class VolumeController < ApplicationController
 	
 	def show
-		@volume = ComicVineVolume.find(params[:volume])
+		@volume ||= ComicVineVolume.find(params[:volume])
 		render :json => @volume if params[:output]=='json'
 	end
 	
@@ -10,7 +10,6 @@ class VolumeController < ApplicationController
 		issue_number = "#{params[:issue]}.#{params[:format]}"
 		@issue = @volume.issues.select{|issue| issue.issue_number==issue_number.to_s }.first
 		@issue = ComicVineIssue.find(@issue.id)
-		puts params.inspect
 		render :json => @issue if params[:output]=='json'
 	end
 	

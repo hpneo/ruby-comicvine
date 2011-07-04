@@ -1,0 +1,43 @@
+body{
+	font-family:'Segoe UI';
+	max-width:600px;
+}
+.transition {
+	-moz-transition: all 1s cubic-bezier(0.59, 0, 0, 1);
+	-webkit-transition: all 1s cubic-bezier(0.59, 0, 0, 1);
+	-o-transition: all 1s cubic-bezier(0.59, 0, 0, 1);
+	transition: all 1s cubic-bezier(0.59, 0, 0, 1);
+	-webkit-backface-visibility: hidden;
+}
+ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+ul.lineal li{
+	display:inline-block;
+	margin:0;
+	padding:4px 10px;
+	/*border:solid 1px #5f8dc2;
+	background:-webkit-gradient(linear, 0 0, 0 bottom, from(#8cacd3), to(#6e97c8));
+	background:-moz-linear-gradient(#8cacd3, #6e97c8);
+	background:linear-gradient(#8cacd3, #6e97c8, 100%);*/
+	text-shadow:1px 1px #9ab7d9;
+	color:#396497;
+}
+ul.lineal#volume_info{
+	font-variant:small-caps;
+}
+ul.lineal#volume_info li#volume_name{
+	font-weight:bold;
+}
+h1#issue_name{
+	font-family:'Cambria';
+}
+img#issue_cover{
+	float:right;
+	margin:10px;
+	padding:10px;
+	width:250px;
+	-webkit-box-shadow: 1px 1px 5px #888888;
+}
