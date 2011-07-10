@@ -11,8 +11,12 @@ a{
 	padding:20px;
 	background:white;
 	overflow:hidden;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
 	border-radius:5px;
 	-webkit-box-shadow: 1px 1px 10px #000000;
+	-moz-box-shadow: 1px 1px 10px #000000;
+	box-shadow: 1px 1px 10px #000000;
 }
 #issue_info{
 	width:600px;
@@ -23,6 +27,8 @@ a{
 #volume_issues li{
 	margin:5px;
 	-webkit-box-shadow: 1px 1px 10px #aaa;
+	-moz-box-shadow: 1px 1px 10px #aaa;
+	box-shadow: 1px 1px 10px #aaa;
 }
 ul{
 	list-style:none;
@@ -64,4 +70,6 @@ img#issue_cover{
 	padding:10px;
 	width:250px;
 	-webkit-box-shadow: 1px 1px 5px #888888;
+	-moz-box-shadow: 1px 1px 5px #888888;
+	box-shadow: 1px 1px 5px #888888;
 }
