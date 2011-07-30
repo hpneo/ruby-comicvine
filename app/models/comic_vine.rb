@@ -18,6 +18,7 @@ class ComicVine
 	def self.all(resource)
 		url = ComicVine.api_url+"#{resource.pluralize}/?api_key=#{@@api_key}&format=json"
 		data = ActiveSupport::JSON.decode(Net::HTTP.get_response(URI.parse(url)).body)['results']
+		data.sort_by{|obj| obj['name'] }
 	end
 	
 	def self.search(resources, query)
