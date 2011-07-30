@@ -16,7 +16,7 @@ class VolumeController < ApplicationController
 	def search
 		if params[:name]
 			@volumes ||= ComicVineVolume.search(params[:name])
-			render :json => @volumes
 		end
+		render :json => @volumes
 	end
 end
